@@ -24,9 +24,7 @@ const quickSort = (array = []) => {
   return [...quickSort(smaller), pivot, ...quickSort(greater)];
 };
 
-const before = new Date().getMilliseconds();
+console.time("Sort");
 const sorted = quickSort(arr);
+console.timeEnd("Sort");
 console.log(sorted);
-const after = new Date().getMilliseconds();
-console.log(`Time: ${after - before} ms`);
-
